@@ -24,6 +24,11 @@ banner = '''
             \033[31m;;;;;;;;;;;;;;;;;;;;\033[0m                                                                    
 '''
 
+msg = '''
+usage: 
+      [download][url] 
+      [query_to_search]
+'''
 def get_results(query):
 	
 	prefix = 'https://vid.puffyan.us/watch?v='

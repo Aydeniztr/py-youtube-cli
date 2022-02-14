@@ -32,14 +32,17 @@ def get_results(query):
 	
 	for x in video_ids:
 		print(prefix + x)
+def download_the_video(link):
+	urllib.request.urlretrieve('https://projectlounge.pw/ytdl/download?url=' + link)
 
 if len(sys.argv) <= 1:
 
 	print(banner)
 	print('\nauthor: Ahmet Yigit AYDENIZ\n')
 
-def download_the_video(link):
-	urllib.request.urlopen('https://projectlounge.pw/ytdl/download?url=%s',% link)
+elif sys.argv[1] == 'download':
+	
+	download_the_video(sys.argv[2])
 
 else:
 	

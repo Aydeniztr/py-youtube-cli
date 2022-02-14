@@ -29,6 +29,7 @@ usage:
       [download][url] 
       [query_to_search]
 '''
+
 def get_results(query):
 	
 	prefix = 'https://vid.puffyan.us/watch?v='
@@ -44,6 +45,7 @@ if len(sys.argv) <= 1:
 
 	print(banner)
 	print('\nauthor: Ahmet Yigit AYDENIZ\n')
+	print(msg)
 
 elif sys.argv[1] == 'download':
 	

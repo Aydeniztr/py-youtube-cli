@@ -1,7 +1,7 @@
-import urllib.request
-import wget
-import sys
-import re
+from urllib.request import urlopen
+from wget import download
+from sys import argv
+from re import findall
 
 
 banner = '''
@@ -28,8 +28,8 @@ banner = '''
 def get_results(query):
 	
 	prefix = 'https://vid.puffyan.us/watch?v='
-	html = urllib.request.urlopen('https://vid.puffyan.us/search?q='+ query)
-	video_ids = re.findall(r'watch\?v=(\S{11})',html.read().decode())
+	html = urlopen('https://vid.puffyan.us/search?q='+ query)
+	video_ids = findall(r'watch\?v=(\S{11})',html.read().decode())
 	a = 0
 	for x in video_ids:
 		a = a+1
@@ -55,7 +55,7 @@ def get_results(query):
 
 def download_the_video(url):
 
-	meta = urllib.request.urlopen('https://projectlounge.pw/ytdl/download?url='+url+'\n')
+	meta = urlopen('https://projectlounge.pw/ytdl/download?url='+url+'\n')
 
 	u = meta.info()
 	
@@ -64,7 +64,7 @@ def download_the_video(url):
 	yn = input('do you want to download the video (size:'+file_size+')(y/n):')
 	
 	if yn == 'y':
-		filename = wget.download('https://projectlounge.pw/ytdl/download?url='+url)
+		filename = download('https://projectlounge.pw/ytdl/download?url='+url)
 		selection2 = input('\n\n'+ filename + ' downloaded succsesfully'+'(r:research/q:quit):')
 		if selection2 == 'r':
 			search_query = str(input('>>enter a query:'))
@@ -98,14 +98,14 @@ def download_the_video(url):
 			
 		else:
 			exit()
-if len(sys.argv) <= 1:
+if len(argv) <= 1:
 
 	print(banner)
 	print('\nauthor: Ahmet Yigit AYDENIZ\n')
 
 else:
 	
-	query = sys.argv[1]
+	query = argv[1]
 	print(banner)	
 	get_results(query)
 	

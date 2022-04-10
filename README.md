@@ -2,13 +2,23 @@
 
 ## description
 ```
+youtube-cli 
 
+is an application for you to surf on the youtube from terminal easly
+you can download videos as however you want or you can just download
+sound files too 
 ```
 
-## installation
+## installation of the required modules
 
 ```
+on linux or unix systems type:
+>> pip install wget
 
+on windows type:
+>> py -m pip install wget
+
+thats it
 ```
 
   Github: https://github.com/Aydeniztr

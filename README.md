@@ -21,6 +21,9 @@ on windows type:
 thats it
 ```
 
+## License
+<img src='https://github.com/Aydeniztr/Aydeniztr/blob/main/3A653446-3661-4124-A854-4ADFA56BF054.png?raw=true'>
+
   Github: https://github.com/Aydeniztr
   
   Website: https://www.aydeniz.tk 

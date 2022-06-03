@@ -22,7 +22,7 @@ thats it
 ```
 
 ## License
-<img src='https://github.com/Aydeniztr/Aydeniztr/blob/main/3A653446-3661-4124-A854-4ADFA56BF054.png?raw=true'>
+<img src='https://github.com/Aydeniztr/Aydeniztr/blob/main/3A653446-3661-4124-A854-4ADFA56BF054.png?raw=true' alt="LICENSE" height="159" width="320" >
 
   Github: https://github.com/Aydeniztr
   

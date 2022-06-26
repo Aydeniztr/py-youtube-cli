@@ -1,9 +1,11 @@
-from urllib.request import urlopen
-from sys import argv
-from re import findall
-from os import system,name
 
-system('cls'if name == 'nt' else 'clear')
+from urllib.request import urlopen
+from re import findall
+import sys
+import os
+
+
+os.system('cls'if os.name == 'nt' else 'clear')
 
 banner = '''
             \033[31m;;;;;;;;;;;;;;;;;;;;\033[37m                                                                    
@@ -500,8 +502,6 @@ def download_the_video(url):
 	
 	yn = input('\ndo you want to download the video (size:'+file_size+')(y/n):')
 	
-	print("\n")
-	
 	if yn == 'y':
 		filename = download('https://projectlounge.pw/ytdl/download?url='+url)
 		selection2 = input('\n\n'+ filename + ' downloaded succsesfully'+'(r:research/q:quit):')
@@ -518,7 +518,7 @@ def download_the_video(url):
 	elif yn == 'n':
 		selection3 = input('\n'+'(r:research/q:quit):')
 		if selection3 == 'r':
-			search_query = str(input('>>enter a query:'))
+			search_query = str(input('\n'+'>>enter a query:'))
 			get_results(search_query)
 		
 		elif selection3 == 'q':
@@ -529,7 +529,7 @@ def download_the_video(url):
 	else:
 		selection3 = input('\n'+'(r:research/q:quit):')
 		if selection3 == 'r':
-			search_query = str(input('>>enter a query:'))
+			search_query = str(input('\n'+'>>enter a query:'))
 			get_results(search_query)
 		
 		elif selection3 == 'q':
@@ -538,20 +538,21 @@ def download_the_video(url):
 		else:
 			exit()
 
-if len(argv) <= 1:
+if len(sys.argv) <= 1:
 
 	print(banner)
-	print('\nauthor: Ahmet Yigit AYDENIZ\n')
+	print('\nauthor: Ahmet Yigit AYDENIZ')
 
-	search_query = str(input('>>type something to search:'))
+	search_query = str(input('\n'+'>>type something to search:'))
 	get_results(search_query)
 		
 else:
 
-	query = argv[1]
+	query = sys.argv[1]
 	print(banner)	
 	get_results(query)
 	
 	
 	
 	str(round(float(''.join(u.get_all("Content-Length")))/1000**2),2)+' mb'
+

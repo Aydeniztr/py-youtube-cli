@@ -551,8 +551,3 @@ else:
 	query = sys.argv[1]
 	print(banner)	
 	get_results(query)
-	
-	
-	
-	str(round(float(''.join(u.get_all("Content-Length")))/1000**2),2)+' mb'
-

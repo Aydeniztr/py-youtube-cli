@@ -1,8 +1,10 @@
 
 from urllib.request import urlopen
 from re import findall
-import sys
-import os
+import sys, shutil, os
+import tempfile
+import math
+
 
 
 os.system('cls'if os.name == 'nt' else 'clear')

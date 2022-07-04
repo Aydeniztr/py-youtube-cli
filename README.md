@@ -9,18 +9,10 @@ you can download videos as however you want or you can just download
 sound files too 
 ```
 
-## installation of the required modules
-
+## setup
 ```
-on linux or unix systems type:
->> pip install wget
-
-on windows type:
->> py -m pip install wget
-
-thats it
+its ready to go from out of box just run it no modules required
 ```
-
 ## License
 <img src='https://github.com/Aydeniztr/Aydeniztr/blob/main/3A653446-3661-4124-A854-4ADFA56BF054.png?raw=true' alt="LICENSE" height="159" width="320" >
 

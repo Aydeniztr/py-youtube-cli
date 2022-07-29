@@ -539,17 +539,20 @@ def download_the_video(url):
 			
 		else:
 			exit()
+def main():
+	
+	if len(sys.argv) <= 1:
 
-if len(sys.argv) <= 1:
+		print(banner)
+		print('\nauthor: Ahmet Yigit AYDENIZ')
 
-	print(banner)
-	print('\nauthor: Ahmet Yigit AYDENIZ')
-
-	search_query = str(input('\n'+'>>type something to search:'))
-	get_results(search_query)
+		search_query = str(input('\n'+'>>type something to search:'))
+		get_results(search_query)
 		
-else:
+	else:
 
-	query = sys.argv[1]
-	print(banner)	
-	get_results(query)
+		query = sys.argv[1]
+		print(banner)	
+		get_results(query)
+
+main()
